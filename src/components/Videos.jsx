@@ -4,7 +4,7 @@ import { VideoCard, ChannelCard } from './';
 
 const Videos = ({ videos }) => {
 
-  console.log(Videos);
+  console.log(videos);
   return (
     <Stack 
       direction='row'
@@ -13,9 +13,7 @@ const Videos = ({ videos }) => {
       gap={2}
     >
       {videos.map((item, idx) => (
-        <Box 
-          key={idx}
-        >
+        <Box key={idx} >
           {item.id.videoId && <VideoCard video={item} />}
           {item.id.channelId && <ChannelCard channelDetail={item} />}
         </Box>
